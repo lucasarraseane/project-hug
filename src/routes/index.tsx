@@ -76,14 +76,14 @@ function DownloadPage() {
               size="lg"
               className="h-14 rounded-full bg-accent px-8 text-base font-semibold text-accent-foreground hover:bg-accent/90"
             >
-              <a href={APP_FILE_URL} download>
+              <a href={APP_FILE_URL} download="cartao-de-todos.apk">
                 <Download className="h-5 w-5" aria-hidden />
                 Baixar aplicativo
               </a>
             </Button>
             <span className="flex items-center justify-center gap-2 rounded-full border border-border bg-card px-6 py-4 text-base font-medium text-foreground">
               <ShieldCheck className="h-5 w-5 text-primary" aria-hidden />
-              Download direto e seguro
+              APK oficial · {APP_FILE_SIZE}
             </span>
           </div>
 
