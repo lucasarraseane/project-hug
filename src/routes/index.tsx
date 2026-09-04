@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Download, ShieldCheck, Smartphone, Zap, CheckCircle2 } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { Button } from "@/components/ui/button";
-import apkAsset from "@/assets/cartao-de-todos.apk.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
