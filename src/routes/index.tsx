@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Download, ShieldCheck, Smartphone, Zap, CheckCircle2 } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { Button } from "@/components/ui/button";
-import apkAsset from "@/assets/cartao-de-todos.apk.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,7 +26,7 @@ export const Route = createFileRoute("/")({
 });
 
 /** Arquivo APK oficial hospedado no CDN. */
-const APP_FILE_URL = apkAsset.url;
+const APP_FILE_URL = "/downloads/cartao-de-todos.apk";
 
 const FEATURES = [
   { icon: ShieldCheck, title: "Download seguro", note: "Arquivo direto" },
