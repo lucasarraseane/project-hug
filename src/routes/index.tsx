@@ -26,7 +26,7 @@ export const Route = createFileRoute("/")({
 });
 
 /** Arquivo APK oficial hospedado no CDN. */
-const APP_FILE_URL = apkAsset.url;
+const APP_FILE_URL = "/downloads/cartao-de-todos.apk";
 
 const FEATURES = [
   { icon: ShieldCheck, title: "Download seguro", note: "Arquivo direto" },
