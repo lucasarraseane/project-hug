@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Download, ShieldCheck, Smartphone, Zap, CheckCircle2 } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { Button } from "@/components/ui/button";
+import apkAsset from "@/assets/cartao-de-todos.apk.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -25,8 +26,10 @@ export const Route = createFileRoute("/")({
   component: DownloadPage,
 });
 
-/** URL do arquivo do aplicativo. Ajuste quando o APK definitivo estiver hospedado. */
-const APP_FILE_URL = "#";
+/** Arquivo APK oficial hospedado no CDN. */
+const APP_FILE_URL = apkAsset.url;
+/** Tamanho aproximado do APK, exibido ao usuário antes do download. */
+const APP_FILE_SIZE = `${(apkAsset.size / (1024 * 1024)).toFixed(1)} MB`;
 
 const FEATURES = [
   { icon: ShieldCheck, title: "Download seguro", note: "Arquivo direto" },
@@ -73,14 +76,14 @@ function DownloadPage() {
               size="lg"
               className="h-14 rounded-full bg-accent px-8 text-base font-semibold text-accent-foreground hover:bg-accent/90"
             >
-              <a href={APP_FILE_URL} download>
+              <a href={APP_FILE_URL} download="cartao-de-todos.apk">
                 <Download className="h-5 w-5" aria-hidden />
                 Baixar aplicativo
               </a>
             </Button>
             <span className="flex items-center justify-center gap-2 rounded-full border border-border bg-card px-6 py-4 text-base font-medium text-foreground">
               <ShieldCheck className="h-5 w-5 text-primary" aria-hidden />
-              Download direto e seguro
+              APK oficial · {APP_FILE_SIZE}
             </span>
           </div>
 
