@@ -83,7 +83,7 @@ function DownloadPage() {
             </Button>
             <span className="flex items-center justify-center gap-2 rounded-full border border-border bg-card px-6 py-4 text-base font-medium text-foreground">
               <ShieldCheck className="h-5 w-5 text-primary" aria-hidden />
-              APK oficial · {APP_FILE_SIZE}
+              Download direto e seguro
             </span>
           </div>
 
