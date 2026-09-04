@@ -25,8 +25,10 @@ export const Route = createFileRoute("/")({
   component: DownloadPage,
 });
 
-/** URL do arquivo do aplicativo. Ajuste quando o APK definitivo estiver hospedado. */
-const APP_FILE_URL = "#";
+/** Arquivo APK oficial hospedado no CDN. */
+const APP_FILE_URL = apkAsset.url;
+/** Tamanho aproximado do APK, exibido ao usuário antes do download. */
+const APP_FILE_SIZE = `${(apkAsset.size / (1024 * 1024)).toFixed(1)} MB`;
 
 const FEATURES = [
   { icon: ShieldCheck, title: "Download seguro", note: "Arquivo direto" },
