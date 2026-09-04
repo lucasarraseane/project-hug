@@ -39,7 +39,7 @@ function DownloadPage() {
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary">
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-8">
         <div className="flex items-center gap-3">
-          <BrandLogo />
+          <BrandLogo className="h-9" />
           <span className="hidden text-xs text-muted-foreground sm:block">Aplicativo oficial</span>
         </div>
         <span className="flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground">
@@ -113,8 +113,8 @@ function AppPreviewCard() {
   return (
     <aside className="rounded-3xl border border-border bg-card p-6 shadow-xl">
       <div className="rounded-2xl bg-brand-deep p-6">
-        <div className="mx-auto flex aspect-square w-full max-w-[220px] items-center justify-center rounded-2xl bg-primary">
-          <BrandLogo tone="light" className="scale-125" />
+        <div className="mx-auto flex aspect-square w-full max-w-[220px] items-center justify-center rounded-2xl bg-primary p-8">
+          <BrandLogo tone="light" className="h-auto w-full" />
         </div>
         <div className="mt-6 flex items-center gap-3">
           <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent">
